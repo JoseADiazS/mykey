@@ -22,10 +22,22 @@ require('header.php')
 
     </style>
     <script src="js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChTzXzJ1CWsrWn51ke7cXcu-2-fBqmy_I&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChTzXzJ1CWsrWn51ke7cXcu-2-fBqmy_I&callback=initMap"></script>
+    <form action="#" method="post">
+        <select name="tipoDoc" class="opciones">
+            <option>Apertura de puerta</option>
+            <option>Apertura de puerta de seguridad</option>
+            <option>Apertura de Auto</option>
+            <option>Cambio de cerradura</option>
+            <option>Cambio de cerradura de seguridad</option>
+            <option>Cambio de cerradura para autos</option>
+            <option>Arreglo cerradura</option>
+            <option>Arreglo cerradura de seguridad</option>
+            <option>Arreglo cerradura para autos</option>
+        </select>
+        <input type="submit" value="Pedir Servicio">
+    </form>
 
-
-    </script>
 </body>
 
 </html>
