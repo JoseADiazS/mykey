@@ -21,7 +21,6 @@ require('header.php')
         }
 
     </style>
-    <p>This is a test</p>
     <script src="js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChTzXzJ1CWsrWn51ke7cXcu-2-fBqmy_I&callback=initMap">
 
