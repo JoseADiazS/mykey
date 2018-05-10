@@ -5,16 +5,19 @@
 function initMap() {
 
 
-    var options = {         //Configuration of the div that contains the Maps Application
+    var options = { //Configuration of the div that contains the Maps Application
         zoom: 8,
-        center: {lat: 4.7110, lng: -74.0721}
+        center: {
+            lat: 4.7110,
+            lng: -74.0721
+        }
     }
 
-    var currentPosition;    //Actual position of the Web browser, it is set in coordinates
-    var marker1;            //Initial marker fixed in the current position
-    var marker2;            //Second marker fixed in the current position, it has the draggable property
-    var ds;                 //DirectionsService is an object used to calculate directions
-    var dr;                 //DirectionsRenderer Render the results of calculated directions
+    var currentPosition; //Actual position of the Web browser, it is set in coordinates
+    var marker1; //Initial marker fixed in the current position
+    var marker2; //Second marker fixed in the current position, it has the draggable property
+    var ds; //DirectionsService is an object used to calculate directions
+    var dr; //DirectionsRenderer Render the results of calculated directions
 
     var map = new google.maps.Map(document.getElementById('map'), options); //Div of the map Application
 
@@ -42,7 +45,12 @@ function initMap() {
     function getPos(position) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
-        return {coords: {lat: latitude, lng: longitude}};
+        return {
+            coords: {
+                lat: latitude,
+                lng: longitude
+            }
+        };
     }
 
     window.onload = getMyLocation;
@@ -114,7 +122,12 @@ function initMap() {
     function getMarkerPos(marker) {
         var latitude = marker.getPosition().lat();
         var longitude = marker.getPosition().lng();
-        return {coords: {lat: latitude, lng: longitude}};
+        return {
+            coords: {
+                lat: latitude,
+                lng: longitude
+            }
+        };
     };
 }
 
@@ -135,13 +148,12 @@ function haversineFormula(marker1pos, marker2pos) {
     lon2 = marker2pos.getPosition().lng();
 
     var R = 6371; // Radius of the earth in km
-    var dLat = deg2rad(lat2 - lat1);  // deg2rad below
+    var dLat = deg2rad(lat2 - lat1); // deg2rad below
     var dLon = deg2rad(lon2 - lon1);
     var a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2)
-    ;
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c; // Distance in km
     return d;
