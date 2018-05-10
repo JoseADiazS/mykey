@@ -24,7 +24,7 @@ require('header.php')
 			    		<h3 class="panel-title">Bienvenido Por Favor Registrese <small>Es gratis</small></h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form">
+			    		<form role="form" method="post">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
