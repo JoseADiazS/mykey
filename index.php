@@ -11,6 +11,9 @@ require('header.php')
     <title>Inicio</title>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dolore eveniet fuga explicabo sapiente animi, placeat ipsum. Placeat, tenetur optio. Incidunt quaerat, reiciendis iste temporibus ipsum at nobis eligendi itaque!</p>
+    <div id="map"></div>
+    <script src="js/script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChTzXzJ1CWsrWn51ke7cXcu-2-fBqmy_I&callback=initMap">
 </body>
 </html>
