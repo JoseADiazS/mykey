@@ -1,13 +1,16 @@
+<?php
+require('header.php')
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Inicio</title>
 </head>
 <body>
-    <p>Test 5</p>
-    <p>Test 4</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dolore eveniet fuga explicabo sapiente animi, placeat ipsum. Placeat, tenetur optio. Incidunt quaerat, reiciendis iste temporibus ipsum at nobis eligendi itaque!</p>
 </body>
 </html>
-
-<p></p>
