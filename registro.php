@@ -21,7 +21,7 @@ require('header.php')
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Bienvenido Por Favor Registrese <small>Es gratis</small></h3>
+			    		<h3 class="panel-title">Bienvenido Por Favor Registrese</h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form role="form" method="post">
@@ -55,7 +55,7 @@ require('header.php')
 			    				</div>
 			    			</div>
 
-			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    			<input type="submit" value="Registrarse" class="btn btn-info btn-block">
 
 			    		</form>
 			    	</div>
