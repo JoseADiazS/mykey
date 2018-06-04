@@ -10,14 +10,9 @@ require('header.php')
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-      <h1>Bienvenido, necesitas un cerrajero?</h1>
-   <?php
-    /**
     <div id="map"></div>
     <style>
         #map {
@@ -44,8 +39,7 @@ require('header.php')
         </select>
         <input id="servicio" type="submit" value="Pedir Servicio">
     </form>
-    */
-?>
+
 </body>
 
 </html>

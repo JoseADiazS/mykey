@@ -27,7 +27,7 @@
                         <li><a href="#">Misión</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Solicitar Servicio</a></li>
+                <li><a href="solicitar-servicio.php">Solicitar Servicio</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
