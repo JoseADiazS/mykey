@@ -41,7 +41,7 @@ function initMap() {
         var request = {
             origin: marker1,
             destination: marker2,
-            travelMode: 'DRIVING'
+            travelMode: 'bicycling'
         };
         directionsService.route(request, function (result, status) {
             if (status == 'OK') {

@@ -37,7 +37,7 @@ require('header.php')
             <option>Arreglo cerradura de seguridad</option>
             <option>Arreglo cerradura para autos</option>
         </select>
-        <input id="servicio" type="submit" value="Pedir Servicio">
+        <a href="espera.php" id="servicio">Pedir Servicio</a>
     </form>
 
 </body>
