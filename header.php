@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +37,13 @@
                 <li><a href="solicitar-servicio.php">Solicitar Servicio</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <?php
                     if (isset($_SESSION['user_id']) && $_SESSION!==null){
-                        echo '<li>'.$_SESSION['name'].'</li>';
+                        echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
+                        echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                     }else{
-                        echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                        echo '<li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Registro</a></li>';
+                        echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>';
                     }
                 ?>
             </ul>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 require('header.php');
 
 ?>
@@ -25,12 +24,12 @@ require('header.php');
                     <div class="panel-body">
                         <form role="form" method="post" id="login">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo">
+                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo" required autofocus>
                             </div>
 
 
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
+                                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña" required autofocus>
                             </div>
 
                             <input type="hidden" name="token" id="token" value="Login"/>
