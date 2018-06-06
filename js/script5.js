@@ -1,4 +1,5 @@
-$('#reg').on('submit', function(event) {
+jQuery(document).ready(function() {
+	$('#reg').on('submit', function(event) {
         //Previene que suceda el evento default
         event.preventDefault();
         //validamos los campos
@@ -12,7 +13,7 @@ $('#reg').on('submit', function(event) {
                 success: function(data){
                     if(data.trim() == "OK"){
                         $('#reg')[0].reset();
-                        document.getElementById("msg").innerHTML = '<div class="alert alert-success"><strong>Success!</strong> Indicates a successful or positive action.</div>';
+                        document.getElementById("msg").innerHTML = '<div class="alert alert-success"><strong>Success!</strong> Cuenta registrada con exito.</div>';
                         //window.location.replace("backend/home.php");
 
                     }else{
@@ -46,3 +47,4 @@ $('#login').on('submit', function(event) {
                 }
             })
     });
+});

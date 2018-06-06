@@ -7,7 +7,6 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
     if ($_POST['token'] == 'Registrar'){
 
         $nombres=$_POST['first_name'];
-        $apellido=$_POST['last_name'];
         $correo=$_POST['email'];
         $pass=$_POST['password'];
         $passc=$_POST['password_confirmation'];
