@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,13 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                    if (isset($_SESSION['user_id']) && $_SESSION!==null){
+                        echo '<li>'.$_SESSION['name'].'</li>';
+                    }else{
+                        echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                    }
+                ?>
             </ul>
         </div>
     </nav>

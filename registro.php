@@ -1,6 +1,6 @@
 <?php
-require('header.php')
-
+require('header.php');
+include('config.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ require('header.php')
 			    		<h3 class="panel-title">Bienvenido Por Favor Registrese</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form" method="post">
+			    		<form role="form" method="post" id="reg">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
@@ -54,14 +54,17 @@ require('header.php')
 			    					</div>
 			    				</div>
 			    			</div>
-
-			    			<input type="submit" value="Registrarse" class="btn btn-info btn-block">
+                            <input type="hidden" name="token" id="token" value="Registrar"/>
+                            <button type="submit"  class="btn btn-info btn-block" >Registrarse</button>
 
 			    		</form>
+			    		<div id="msg"></div>
 			    	</div>
 	    		</div>
     		</div>
     	</div>
     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/script5.js"></script>
 </body>
 </html>
