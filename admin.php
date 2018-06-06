@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="token" id="token" value="Registrar" />
+                            <input type="hidden" name="token" id="token" value="cerrajero" />
                             <button type="submit" class="btn btn-info btn-block">Registrar Cerrajero</button>
 
                         </form>
