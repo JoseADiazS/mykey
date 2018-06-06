@@ -4,30 +4,44 @@
  */
 function initMap() {
 
-
-    var options = { //Configuration of the div that contains the Maps Application
+    // Variable con las opciones por defecto para la creacion del mapa
+    var options = {
+        // Zoom que manejara el mapa al iniciar
         zoom: 10,
+        // Coordenadas a donde se centrara el mapa al iniciar
         center: {
+            // Latitud dada por defecto
             lat: 4.7110,
+            // Longitud dada por defecto
             lng: -74.0721
         }
     }
+    // Variable que guardara una ubicacion determinada
     var posicion = new google.maps.LatLng()
-    var currentPosition; //Actual position of the Web browser, it is set in coordinates
-    var marker1; //Initial marker fixed in the current position
-    var marker2; //Second marker fixed in the current position, it has the draggable property
-
+    // Posicion actual del navegador
+    var currentPosition;
+    // Primer marcador inicial determinado en la posicion del usuario
+    var marker1;
+    // Segundo marcador señalado en la posicion del usuario
+    // Este podra ser ubicado por el usuario
+    var marker2;
+    // Llamado al servicio de la API Directions de google maps para dar direcciones
     var directionsService = new google.maps.DirectionsService();
+    // Llamado al servicio de la API Directions de google maps para mostrar una ruta en el mapa
     var directionsDisplay = new google.maps.DirectionsRenderer();
-
+    // Variable que contendra el mapa
     var map = new google.maps.Map(document.getElementById('map'), options);
+    // Se señala el mapa donde se utilizara el servicio de la API Directions de google maps
     directionsDisplay.setMap(map);
 
+    /**
+     * [[Description]]
+     */
     function calcRoute() {
         var request = {
             origin: marker1,
             destination: marker2,
-            travelMode: 'DRIVING'
+            travelMode: 'bicycling'
         };
         directionsService.route(request, function (result, status) {
             if (status == 'OK') {
