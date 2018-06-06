@@ -38,10 +38,17 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                    if (isset($_SESSION['user_id']) && $_SESSION!==null){
+
+                    if(isset($_SESSION['user_id']) && $_SESSION!==null && $_SESSION['name']=='Admin'){
+                         echo '<li><a href="admin.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
+                        echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
+                    }
+
+                    else if (isset($_SESSION['user_id']) && $_SESSION!==null){
                         echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
-                    }else{
+                    }
+                    else{
                         echo '<li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Registro</a></li>';
                         echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>';
                     }
