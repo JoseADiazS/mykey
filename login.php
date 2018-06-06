@@ -24,17 +24,17 @@ require('header.php');
                     </div>
                     <div class="panel-body">
                         <form role="form" method="post" id="login">
+                            <!-- formulario de inicio sesión -->
                             <div class="form-group">
                                 <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo">
                             </div>
-
 
                             <div class="form-group">
                                 <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
                             </div>
 
-                            <input type="hidden" name="token" id="token" value="Login"/>
-                            <button type="submit"  class="btn btn-info btn-block" >Ingresar</button>
+                            <input type="hidden" name="token" id="token" value="Login" />
+                            <button type="submit" class="btn btn-info btn-block">Ingresar</button>
 
                         </form>
                         <div id="msg"></div>

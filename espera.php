@@ -9,6 +9,7 @@ require('header.php')
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+    <!-- mensaje de espera mostrado luego de solicitar un servicio -->
 <body>
     <h1>Tu cerrajero llegara en 15---20 minutos</h1>
 </body>
