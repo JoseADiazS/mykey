@@ -54,3 +54,18 @@ h1 {
                  0 30px 30px rgba(0, 0, 0, .3);
   }
 }
+
+#map {
+    position: relative;
+    padding-bottom: 75%; //
+    height: 0;
+    overflow: hidden;
+    }
+#map iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+    }
+}
