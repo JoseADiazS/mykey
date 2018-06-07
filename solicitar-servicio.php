@@ -10,6 +10,7 @@ require('header.php')
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
+    <!-- Llamado al archivo de css con los styles utilizados por el documento -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
