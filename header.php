@@ -29,9 +29,8 @@
 
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Nosotros <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Visión</a></li>
-                            <li><a href="#">Misión</a></li>
+                            <li><a href="historia.php">Historia</a></li>
+
                         </ul>
                     </li>
                     <?php if(isset($_SESSION['user_id']) && $_SESSION!==null){
