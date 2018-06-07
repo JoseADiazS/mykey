@@ -26,6 +26,8 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Registro de cerrajeros</h3>
                         </div>
+
+                        <!-- formulario registro de cerrajero -->
                         <div class="panel-body">
                             <form role="form" method="post" id="cerrajero">
 
