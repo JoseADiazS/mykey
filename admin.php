@@ -66,7 +66,7 @@
                                 <input type="hidden" name="token" id="token" value="cerrajero" />
                                 <!-- boton que se utilizara para obtener los datos del cerrajero al completar el formulario -->
                                 <button type="submit" class="btn btn-info btn-block">Registrar Cerrajero</button>
-
+                                 <a href="cerrajeros.php" class="btn btn-danger btn-block" role="button">Cancelar</a>
                             </form>
                             <div id="msg"></div>
                         </div>

@@ -54,18 +54,20 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         if ($pass==$row['contrasena']) {
             $_SESSION['user_id'] = $row['idcredencialesDeUsuarios'];
             $_SESSION['name'] = $row['nombreDeUsuario'];
-            $_SESSION['rol'] = "U";
+            $_SESSION['rol'] = "A";
 
              $sql2="SELECT * from  cerrajero WHERE credencialesDeUsuarios_idcredencialesDeUsuarios = '".$row['idcredencialesDeUsuarios']."' ";
             $resultado2 = $con ->query($sql2);
             if (mysqli_num_rows($resultado2) == 1){
                 $_SESSION['rol'] = "C";
+                $row2 = mysqli_fetch_assoc($resultado2);
+                $_SESSION['estado'] = $row2['estado'];
             }
 
                 $sql3="SELECT * from  usuario WHERE credencialesDeUsuarios_idcredencialesDeUsuarios = '".$row['idcredencialesDeUsuarios']."' ";
                 $resultado3 = $con ->query($sql3);
             if (mysqli_num_rows($resultado3) == 1){
-                $_SESSION['rol'] = "A";
+                $_SESSION['rol'] = "U";
             }
             echo "OK";
 
@@ -109,6 +111,22 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         }
 
     }
+
+
+    if ($_POST['token'] == 'estado'){
+        $estado=$_POST['estadod'];
+
+        $sql="UPDATE cerrajero set estado = ".$estado." where credencialesDeUsuarios_idcredencialesDeUsuarios = ".$_SESSION['user_id']."";
+
+            if ($con->query($sql) === TRUE) {
+                $_SESSION['estado'] = $estado;
+                    echo "OK";
+                }else{
+                    echo "Error: " . $sql . "<br>" . $con->error;
+                }
+
+        }
+
 }
     $con->close();
 ?>

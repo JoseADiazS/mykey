@@ -34,21 +34,35 @@
                             <li><a href="#">Misión</a></li>
                         </ul>
                     </li>
-                    <li><a href="solicitar-servicio.php">Solicitar Servicio</a></li>
+                    <?php if(isset($_SESSION['user_id']) && $_SESSION!==null){
+                        if($_SESSION['rol']=="U"){
+                            echo '<li><a href="solicitar-servicio.php">Solicitar Servicio</a></li>';
+                        }
+                        if($_SESSION['rol']=="C"){
+                            echo '<li><a href="solicitar-servicio.php">Mis Servicios</a></li>';
+                        }
+                        if($_SESSION['rol']=="A"){
+                            echo '<li><a href="cerrajeros.php">Cerrajeros</a></li>';
+
+                        }
+}
+                    ?>
+
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php
 
                     if(isset($_SESSION['user_id']) && $_SESSION!==null){
-                        if( $_SESSION['rol']=='A'){
-                         echo '<li><a href="admin.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
+                        if($_SESSION['rol']=="U"){
+                        echo '<li><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }
-                        else if ($_SESSION['rol']=='U'){
+                        else if ($_SESSION['rol']=="A"){
                         echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }
-                        else if( $_SESSION['rol']=='C'){
+                        else if( $_SESSION['rol']=="C"){
                         echo '<li><a href="cerrajero.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }

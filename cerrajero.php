@@ -2,7 +2,11 @@
 /**
 * Llamado al header.php
 */
-require('header.php')
+require('header.php');
+$estado = 3;
+if (isset($_SESSION['estado'])){
+    $estado = $_SESSION['estado'];
+}
 
 ?>
 
@@ -30,10 +34,10 @@ require('header.php')
 
                             <!-- diferentes estados del cerrajero -->
                             <div class="form-group">
-                                <select name="tipoDoc" class="form-control input-sm">
-                                    <option>Libre</option>
-                                    <option>En servicio</option>
-                                    <option>Apagado</option>
+                                <select name="estadod" class="form-control input-sm" id="estadod">
+                                    <option value="3" <?php if ($estado ==3){echo "selected='selected'";}?>>Libre</option>
+                                    <option value="4" <?php if ($estado ==4){echo "selected='selected'";}?>>En servicio</option>
+                                    <option value="5" <?php if ($estado ==5){echo "selected='selected'";}?>>Apagado</option>
                                 </select>
                                 <br>
                                 <button type="submit" class="btn btn-info btn-block">Cambiar estado</button>
@@ -47,6 +51,10 @@ require('header.php')
             </div>
         </div>
     </div>
+        <!-- Relacion con los scripts de jquery -->
+    <script src="js/jquery.js"></script>
+    <!-- Relacion con los scripts utilizados para la conexion con la base de datos -->
+    <script src="js/script5.js"></script>
 </body>
 
 </html>

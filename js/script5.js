@@ -128,18 +128,11 @@ jQuery(document).ready(function () {
                 data: form_data,
                 success: function (data) {
                     if (data.trim() == "OK") {
-                        $('#reg')[0].reset();
                         document.getElementById("msg").innerHTML = '<br><div class="alert alert-success"><strong>Correcto!</strong> Estado cambiado con exito.</div>';
                         $(".alert").fadeTo(2000, 500).slideUp(500, function () {
                             $(this).remove();
                         });
                         //window.location.replace("backend/home.php");
-
-                    } else if (data.trim() == "YA") {
-                        document.getElementById("msg").innerHTML = '<br><div class="alert alert-waring"><strong>Error!</strong> Esta en ese estado.</div>';
-                        $(".alert").fadeTo(2000, 500).slideUp(500, function () {
-                            $(this).remove();
-                        });
                     } else {
                         document.getElementById("msg").innerHTML = '<br><div class="alert alert-danger"><strong>Error!</strong> Avise al administrador del sitio.</div>';
                         $(".alert").fadeTo(2000, 500).slideUp(500, function () {
