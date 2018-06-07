@@ -42,7 +42,6 @@
                         }
                         if($_SESSION['rol']=="A"){
                             echo '<li><a href="cerrajeros.php">Cerrajeros</a></li>';
-
                         }
 }
                     ?>
@@ -54,7 +53,7 @@
 
                     if(isset($_SESSION['user_id']) && $_SESSION!==null){
                         if($_SESSION['rol']=="U"){
-                        echo '<li><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</li>';
+                        echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }
                         else if ($_SESSION['rol']=="A"){
