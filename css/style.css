@@ -54,3 +54,8 @@ h1 {
                  0 30px 30px rgba(0, 0, 0, .3);
   }
 }
+
+#imagen-historia {
+    display: block;
+    margin: auto;
+}
