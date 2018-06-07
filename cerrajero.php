@@ -24,7 +24,7 @@ require('header.php')
                     <div class="panel-body">
                         <form role="form" method="post" action="cerrajero.php" id="estado">
 
-                            <!-- lista desplegable con los diferentes servicios prestados -->
+                            <!-- diferentes estados del cerrajero -->
                             <div class="form-group">
                                 <select name="tipoDoc" class="form-control input-sm">
                                     <option>Libre</option>
