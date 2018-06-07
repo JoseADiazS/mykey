@@ -34,7 +34,7 @@ require('header.php')
                                 <br>
                                 <button type="submit" class="btn btn-info btn-block">Cambiar estado</button>
                             </div>
-                             <input type="hidden" name="token" id="token" value="estado" />
+                            <input type="hidden" name="token" id="token" value="estado" />
 
                         </form>
                         <div id="msg"></div>

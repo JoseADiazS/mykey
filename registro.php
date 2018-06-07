@@ -35,12 +35,12 @@ include('config.php');
                                 <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nombre" required autofocus>
                             </div>
 
-                                <div class="form-group">
-                                    <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono" required autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion" required autofocus>
-                                </div>
+                            <div class="form-group">
+                                <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion" required autofocus>
+                            </div>
 
                             <div class="form-group">
                                 <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Correo" required autofocus>
@@ -63,9 +63,9 @@ include('config.php');
 
                         </form>
 
-                            <div id="msg">
+                        <div id="msg">
 
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

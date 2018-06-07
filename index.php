@@ -15,8 +15,8 @@ require('header.php')
 
 <body>
 
-      <h1>Bienvenido, necesitas un cerrajero?</h1>
-   <?php
+    <h1>Bienvenido, necesitas un cerrajero?</h1>
+    <?php
     /**
     <div id="map"></div>
     <style>
