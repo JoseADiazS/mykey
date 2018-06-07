@@ -54,7 +54,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         if ($pass==$row['contrasena']) {
             $_SESSION['user_id'] = $row['idcredencialesDeUsuarios'];
             $_SESSION['name'] = $row['nombreDeUsuario'];
-            $_SESSION['rol'] = "A";
+            $_SESSION['rol'] = "U";
 
              $sql2="SELECT * from  cerrajero WHERE credencialesDeUsuarios_idcredencialesDeUsuarios = '".$row['idcredencialesDeUsuarios']."' ";
             $resultado2 = $con ->query($sql2);
@@ -65,7 +65,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
                 $sql3="SELECT * from  usuario WHERE credencialesDeUsuarios_idcredencialesDeUsuarios = '".$row['idcredencialesDeUsuarios']."' ";
                 $resultado3 = $con ->query($sql3);
             if (mysqli_num_rows($resultado3) == 1){
-                $_SESSION['rol'] = "U";
+                $_SESSION['rol'] = "A";
             }
             echo "OK";
 
