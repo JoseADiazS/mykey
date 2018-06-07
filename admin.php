@@ -27,7 +27,7 @@
                         <h3 class="panel-title">Registro de cerrajeros</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="post" id="reg">
+                        <form role="form" method="post" id="cerrajero">
 
 
                                 <div class="form-group">
@@ -37,7 +37,7 @@
                                     <input type="text" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion" required autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono" required autofocus>
+                                    <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono" required autofocus>
                                 </div>
 
                             <div class="form-group">

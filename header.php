@@ -39,19 +39,25 @@
             <ul class="nav navbar-nav navbar-right">
                 <?php
 
-                    if(isset($_SESSION['user_id']) && $_SESSION!==null && $_SESSION['name']=='Admin'){
+                    if(isset($_SESSION['user_id']) && $_SESSION!==null){
+                        if( $_SESSION['rol']=='A'){
                          echo '<li><a href="admin.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
-                    }
-
-                    else if (isset($_SESSION['user_id']) && $_SESSION!==null){
+                        }
+                        else if ($_SESSION['rol']=='U'){
                         echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
-                    }
-                    else{
+                        }
+                        else if( $_SESSION['rol']=='C'){
+                        echo '<li><a href="cerrajero.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
+                        echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
+                        }
+                    }else{
                         echo '<li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Registro</a></li>';
                         echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>';
                     }
+
+
                 ?>
             </ul>
         </div>
