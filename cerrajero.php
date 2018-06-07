@@ -1,4 +1,7 @@
 <?php
+/**
+* Llamado al header.php
+*/
 require('header.php')
 
 ?>
@@ -13,12 +16,13 @@ require('header.php')
 </head>
 
 <body>
-
+    <!-- Container principal del cuerpo de la pagina -->
     <div class="container">
         <div class="row centered-form">
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                       <!-- Mensaje de bienvenida al usuario de tipo cerrajero -->
                         <h3 class="panel-title">Bienvenido seleccione su estado</h3>
                     </div>
                     <div class="panel-body">
