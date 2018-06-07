@@ -1,4 +1,7 @@
 <?php
+/**
+* Llamado al header.php
+*/
 require('header.php')
 ?>
 
