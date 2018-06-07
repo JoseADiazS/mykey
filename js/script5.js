@@ -89,11 +89,7 @@ jQuery(document).ready(function () {
                 success: function (data) {
                     if (data.trim() == "OK") {
                         $('#cerrajero')[0].reset();
-                        document.getElementById("msg").innerHTML = '<br><div class="alert alert-success"><strong>Correcto!</strong> Cerrajero registrado con exito.</div>';
-                        $(".alert").fadeTo(2000, 500).slideUp(500, function () {
-                            $(this).remove();
-                        });
-                        //window.location.replace("backend/home.php");
+                        window.location.replace("cerrajeros.php");
 
                     } else if (data.trim() == "YA") {
                         document.getElementById("msg").innerHTML = '<br><div class="alert alert-danger"><strong>Error!</strong> Usuario ya registrado.</div>';

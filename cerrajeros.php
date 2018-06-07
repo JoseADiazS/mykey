@@ -34,46 +34,40 @@ require('header.php');
      <?php
 
         include('config.php');
-        $sql="SELECT * from  cerrajeros";
+        $sql="SELECT * from  cerrajero";
         $resultado = $con ->query($sql);
-        $result = mysqli_fetch_assoc($resultado);
         if (mysqli_num_rows($resultado) == 0){
             echo '<tr><td colspan="5"No hay informacion</td></tr>';
         }else{
 
-
-            foreach($result as $row){
-
-                echo '<tr>';
-                echo '<td>'.$row['idcerrajero'].'</td>';
-                echo '<td>'.$row['nombre'].'</td>';
-                echo '<td>'.$row['direccion'].'</td>';
-                echo '<td>'.$row['telefono'].'</td>';
-                if ( $row['estado'] == 1){
+            while($rs=mysqli_fetch_array($resultado))
+              {
+                echo "<tr>"
+                       ."<td>".$rs['idcerrajero']."</td>"
+                       ."<td>".$rs['nombre']."</td>"
+                       ."<td>".$rs['telefono']."</td>"
+                       ."<td>".$rs['direccion']."</td>"
+                        ."<td>";
+                if ( $rs['estado'] == 1){
                    echo '<span class="label label-primary">Activo</span>';
-                }else if($row['estado'] == 2){
+                }else if($rs['estado'] == 2){
                     echo '<span class="label label-danger">Suspendido</span>';
-                }else if($row['estado'] == 3){
+                }else if($rs['estado'] == 3){
                    echo '<span class="label label-success">Libre</span>';
-                }else if($row['estado'] == 4){
+                }else if($rs['estado'] == 4){
                     echo '<span class="label label-info">En servicio</span>';
-                }else if($row['estado'] == 5){
+                }else if($rs['estado'] == 5){
                     echo '<span class="label label-default">Warning Label</span>';
                 }
-                echo '</tr>';
-            }
+
+                echo '</td></tr>';
+
+              }
 
         }
 
 
         ?>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
     </tbody>
   </table>
             </div>
