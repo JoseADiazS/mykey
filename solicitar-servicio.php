@@ -16,7 +16,7 @@ require('header.php')
 
 <body>
    <!-- div mapa donde se ubicara el mapa -->
-    <div id="map" class="row"></div>
+    <div id="map"></div>
     <!-- style de tamaño predeterminado para el mapa -->
     <style>
         #map {
