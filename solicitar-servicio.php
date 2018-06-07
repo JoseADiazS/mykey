@@ -35,6 +35,8 @@ require('header.php')
                     </div>
                     <div class="panel-body">
                         <form role="form" method="post" action="espera.php" id="servicio">
+
+                            <!-- lista desplegable con los diferentes servicios prestados -->
                             <div class="form-group">
                                 <select name="tipoDoc" class="form-control input-sm">
                                     <option>Apertura de puerta</option>

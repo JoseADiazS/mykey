@@ -25,13 +25,15 @@ include('config.php');
                     <div class="panel-heading">
                         <h3 class="panel-title">Bienvenido Por Favor Registrese</h3>
                     </div>
+
+                    <!-- formulario de registro de usuario -->
                     <div class="panel-body">
                         <form role="form" method="post" id="reg">
 
 
-                                <div class="form-group">
-                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nombre" required autofocus>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nombre" required autofocus>
+                            </div>
 
                                 <div class="form-group">
                                     <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono" required autofocus>
