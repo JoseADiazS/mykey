@@ -35,13 +35,15 @@ function initMap() {
     directionsDisplay.setMap(map);
 
     /**
-     * [[Description]]
+     * Metodo que calcula la ruta entre dos puntos.
+     * En este caso se le dan como parametros dos marcadores
+     * el modo de viaje es en "auto"
      */
     function calcRoute() {
         var request = {
             origin: marker1,
             destination: marker2,
-            travelMode: 'bicycling'
+            travelMode: 'DRIVING'
         };
         directionsService.route(request, function (result, status) {
             if (status == 'OK') {
@@ -50,12 +52,10 @@ function initMap() {
         });
     }
 
-    //Div of the map Application
-
     /**
-     * Adds a marker to the map, given an object with the specific coordinates
-     * @param props Object with coordinates
-     * @returns {google.maps.Marker} A marker displayed on the map
+     * Metodo que añade un marcador al mapa en la posicion dada por las ubicacion del usuario
+     * @param props Objeto con las coordenadas
+     * @returns {google.maps.Marker} Un marcador añadido al mapa
      */
     function addMarker(props) {
         var marker = new google.maps.Marker({
@@ -69,9 +69,9 @@ function initMap() {
     }
 
     /**
-     * Gets coordinates of position object
-     * @param position Object with a geolocation.
-     * @returns {{coords: {lat: number, lng: number}}} Object with a position defined in coordinates
+     * Metodo que obtiene las coordenadas de una posicion
+     * @param position Objeto con la geoposicion
+     * @returns {{coords: {lat: numero, lng: numero}}} Objeto con una posicion definida en coordenadas
      */
     function getPos(position) {
         var latitude = position.coords.latitude;
@@ -84,12 +84,12 @@ function initMap() {
         };
     }
 
+    // funcion que determina la ubicacion del usuario al cargar la ventana
     window.onload = getMyLocation;
 
-    /**
-     * Initial function, executed when the Web Browser loads, this function request the user
-     * to enable the gps service for obtain the current position of the device.
-     */
+    /*
+    *Metodo que obtiene la ubicacion del usuario
+    */
     function getMyLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -125,9 +125,9 @@ function initMap() {
     };
 
     /**
-     * Gets the position of a given marker
-     * @param marker The given marker
-     * @returns {{coords: {lat: *, lng: *}}} Object with coordinates
+     * Metodo que obtiene la posicion de un marcador
+     * @param marker Un marcador
+     * @returns {{coords: {lat: *, lng: *}}} Objeto con las coordenadas
      */
     function getMarkerPos(marker) {
         var latitude = marker.getPosition().lat();
