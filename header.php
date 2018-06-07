@@ -38,7 +38,7 @@
                             echo '<li><a href="solicitar-servicio.php">Solicitar Servicio</a></li>';
                         }
                         if($_SESSION['rol']=="C"){
-                            echo '<li><a href="solicitar-servicio.php">Mis Servicios</a></li>';
+                            echo '<li><a href="cerrajero.php">Mi Estado</a></li>';
                         }
                         if($_SESSION['rol']=="A"){
                             echo '<li><a href="cerrajeros.php">Cerrajeros</a></li>';
@@ -61,7 +61,7 @@
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }
                         else if( $_SESSION['rol']=="C"){
-                        echo '<li><a href="cerrajero.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
+                        echo '<li><a><span class="glyphicon glyphicon-user"></span>'.$_SESSION['name'].'</a></li>';
                         echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>';
                         }
                     }else{

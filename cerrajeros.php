@@ -25,8 +25,8 @@ require('header.php');
   <tr>
         <th>Id</th>
         <th>Nombre</th>
-        <th>Direccion</th>
         <th>Telefono</th>
+        <th>Direccion</th>
         <th>Estado</th>
       </tr>
     </thead>
