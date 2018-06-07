@@ -57,7 +57,7 @@ require('header.php');
                 }else if($rs['estado'] == 4){
                     echo '<span class="label label-info">En servicio</span>';
                 }else if($rs['estado'] == 5){
-                    echo '<span class="label label-default">Warning Label</span>';
+                    echo '<span class="label label-default">Apagado</span>';
                 }
 
                 echo '</td></tr>';
