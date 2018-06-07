@@ -2,6 +2,7 @@
 session_start();
 
 include('config.php');
+//se insrtan los datos a la base de datos se ponen tokens para saber cuan formularios cual
 if (isset($_POST['token']) && $_POST['token']!=='') {
 
     if ($_POST['token'] == 'Registrar'){
@@ -13,11 +14,12 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         $pass=$_POST['password'];
         $passc=$_POST['password_confirmation'];
 
-
+        //busca en a base de datos si existe
         $sql="SELECT * from  credencialesdeusuarios WHERE correo = '".$correo."' OR nombreDeUsuario = '".$nombre."'";
         $resultado = $con ->query($sql);
 
         if (mysqli_num_rows($resultado) == 0){
+            //lo inserta en la base de datos
             $sql="INSERT INTO credencialesdeusuarios (nombreDeUsuario,correo,contrasena)
         VALUES ('".$nombre."','".$correo."','".$pass."')";
 
@@ -46,7 +48,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         $correo=$_POST['email'];
         $pass=$_POST['password'];
 
-
+        //busca en a base de datos si existe
         $sql="SELECT * from  credencialesdeusuarios WHERE correo = '".$correo."' ";
         $resultado = $con ->query($sql);
         $row = mysqli_fetch_assoc($resultado);
@@ -55,7 +57,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
             $_SESSION['user_id'] = $row['idcredencialesDeUsuarios'];
             $_SESSION['name'] = $row['nombreDeUsuario'];
             $_SESSION['rol'] = "A";
-
+            //lo inserta en la base de datos
              $sql2="SELECT * from  cerrajero WHERE credencialesDeUsuarios_idcredencialesDeUsuarios = '".$row['idcredencialesDeUsuarios']."' ";
             $resultado2 = $con ->query($sql2);
             if (mysqli_num_rows($resultado2) == 1){
@@ -91,7 +93,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         if (mysqli_num_rows($resultado) == 0){
             $sql="INSERT INTO credencialesdeusuarios (nombreDeUsuario,correo,contrasena)
         VALUES ('".$nombre."','".$correo."','".$pass."')";
-
+            //lo inserta en la base de datos
             if ($con->query($sql) === TRUE) {
                 $last_id = $con->insert_id;
                 $sql2="INSERT INTO cerrajero (nombre,direccion,telefono,estado, credencialesDeUsuarios_idcredencialesDeUsuarios)
@@ -117,7 +119,7 @@ if (isset($_POST['token']) && $_POST['token']!=='') {
         $estado=$_POST['estadod'];
 
         $sql="UPDATE cerrajero set estado = ".$estado." where credencialesDeUsuarios_idcredencialesDeUsuarios = ".$_SESSION['user_id']."";
-
+            //Cambia el stado de el cerrajero
             if ($con->query($sql) === TRUE) {
                 $_SESSION['estado'] = $estado;
                     echo "OK";

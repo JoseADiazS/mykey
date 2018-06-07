@@ -19,6 +19,7 @@ require('header.php')
 <body>
     <!-- Mensaje de bienvenida al usuario -->
     <h1>Bienvenido, necesitas un cerrajero?</h1>
+    <p></p>
 </body>
 
 </html>
